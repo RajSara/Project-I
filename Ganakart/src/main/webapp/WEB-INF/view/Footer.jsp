@@ -14,7 +14,7 @@
 <div class="navbar  navbar-inverse navbar-fixed-bottom"> 
      <div class="container">
        <div class="navbar-text pull=left">
-	    <p> © GanaKart company 2017.</p>
+	    <p style="font-size:8px"> copyright © GanaKart company 2017.</p>
 	   </div>
 	 </div>
    </div>

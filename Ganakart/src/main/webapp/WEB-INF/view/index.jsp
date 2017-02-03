@@ -14,6 +14,7 @@ height: auto;
 width: 100%;
 }
 </style>
+<title>Ganakart</title>
 </head>
 
 <body>
