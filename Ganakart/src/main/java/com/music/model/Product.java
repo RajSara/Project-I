@@ -1,30 +1,30 @@
 package com.music.model;
 
-import java.util.Date;
+import java.io.Serializable;
+
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name="product")
-public class Product  {
+
+public class Product implements Serializable {
 	
+	private static final long serialVersionUID = -723583058586873479L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
+    private Integer productid;
 	private String name;
 	private String description;
-	private double price;
-	private int quantity;
-	private Date mfg;
+	private Double price;
 	
-	public int getId() {
-		return id;
+	public Integer getProductid() {
+		return productid;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setProductid(Integer productid) {
+		this.productid = productid;
 	}
 	public String getName() {
 		return name;
@@ -38,23 +38,10 @@ public class Product  {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public double getPrice() {
+	public Double getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
-	public int getQuantity() {
-		return quantity;
-	}
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-	public Date getMfg() {
-		return mfg;
-	}
-	public void setMfg(Date mfg) {
-		this.mfg = mfg;
-	}
-	
 }

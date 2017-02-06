@@ -14,7 +14,7 @@
 
 </head>
 <body>
-									<!-- Header navbar -->
+				<!-- 					Header navbar
 				
 				<nav class="navbar  navbar-inverse  navbar-fixed-top">
   <div class="container">
@@ -26,9 +26,12 @@
   <span class="icon-bar"> </span>
   <span class="icon-bar"> </span>
   <span class="icon-bar"> </span>
-  </button>
+  </button> -->
   
-   <a class="navbar-brand" href="index"> GanaKart</a>
+                                <%@ include file="Head.jsp" %>
+                                 
+                                   
+  <!--  <a class="navbar-brand" href="index"> GanaKart</a>
    
        <div class="navbar-collapse collapse">
            <ul class="nav navbar-nav navbar-left">
@@ -54,7 +57,7 @@
 			   </div>
   </div>
   </div>
-</nav>	      
+</nav>	       -->
 				
 									
 <div class="vid-container">
@@ -83,6 +86,7 @@
     </div>
   </div>
 </div>
+
 									<%@include file="Footer.jsp"%>
 									
 									<script src="<c:url value='/resource/js/bootstrap.min.js'/>" /></script>

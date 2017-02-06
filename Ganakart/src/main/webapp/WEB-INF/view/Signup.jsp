@@ -14,7 +14,9 @@
 
 </head>
 <body>
-									<!-- Header navbar -->
+									<%@ include file="Head.jsp" %>
+									
+									<!-- <!-- Header navbar -->
 				
   <nav class="navbar  navbar-inverse  navbar-fixed-top">
   <div class="container">
@@ -54,7 +56,7 @@
 			   </div>
   </div>
   </div>
-</nav>
+</nav> -->
 												
 												<div class="vid-container">
   <video class="bgvid" autoplay="autoplay" muted="muted" preload="auto" loop>

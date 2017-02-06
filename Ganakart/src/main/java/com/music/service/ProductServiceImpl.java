@@ -1,25 +1,53 @@
 package com.music.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.music.dao.ProductDao;
 import com.music.model.Product;
 
-@Service
-public class ProductServiceImpl implements ProductService
-{
+@Service("productService")
 
+public class ProductServiceImpl implements ProductService {
+	
 	@Autowired
 	private ProductDao productDao;
-	
-	public ProductServiceImpl()
-	{
-		System.out.println("Creating instance for ProductServiceImpls");
+
+	@Transactional(propagation=Propagation.SUPPORTS)
+	public int insertRow(Product prd) {
+		// TODO Auto-generated method stub
+		return productDao.insertRow(prd);
 	}
-	public Product SaveProduct(Product product) {
-	
-		return productDao.saveProduct(product);
+
+	@Transactional(propagation=Propagation.SUPPORTS)
+	public List getList() {
+		// TODO Auto-generated method stub
+		return productDao.getList();
 	}
+
+	@Transactional(propagation=Propagation.SUPPORTS)
+	public Product getRowById(int id) {
+		// TODO Auto-generated method stub
+		return productDao.getRowById(id);
+	}
+
+	@Transactional(propagation=Propagation.SUPPORTS)
+	public int updateRow(Product prd) {
+		// TODO Auto-generated method stub
+		return productDao.updateRow(prd);
+	}
+
+	@Transactional(propagation=Propagation.SUPPORTS)
+	public int deleteRow(int id) {
+		// TODO Auto-generated method stub
+		return productDao.deleteRow(id);
+	}
+	
+	
+	
 
 }
