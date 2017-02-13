@@ -9,6 +9,15 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		    <link rel="stylesheet" href="<c:url value='/resource/css/bootstrap.min.css'/>" />
 		 
+                                 <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+
+    <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
+      
+
+
+
 </head>
 <body>
 
@@ -32,7 +41,11 @@
            <ul class="nav navbar-nav navbar-left">
 		     <li class=""><a href="Carousel">Home</a> </li>
 			 <li> <a href="About">About</a> </li>
-			 <li> <a href="ProductForm">Product</a> </li>
+			 <li> <a href="admin/product/productform">Product</a> </li>
+			 
+			 <c:url var="allProducts" value="/all/product/getAllProducts"></c:url>
+			 <li><a href="${allProducts }"> Browse All Products </a></li>
+			 
 			    <li class="dropdown">
 			       <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Categories <span class="caret"> </span> </a>
 					 <ul class="dropdown-menu">
