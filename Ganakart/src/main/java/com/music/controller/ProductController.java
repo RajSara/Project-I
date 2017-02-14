@@ -41,7 +41,7 @@ public class ProductController
 	@RequestMapping("/admin/product/addProduct")
 	public String saveProduct(
 		@Valid  @ModelAttribute(value="product") Product product,BindingResult result){
-		System.out.println("I am inside the block controller");
+		/*System.out.println("I am inside the block controller");*/
 		if(result.hasErrors())
 			return "productform";
 		productService.saveProduct(product);
