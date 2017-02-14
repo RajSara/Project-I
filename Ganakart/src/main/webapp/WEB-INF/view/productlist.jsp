@@ -8,7 +8,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+
+<body style="margin-top:90px;">
+
 	<div class="container">
 
 		<table class="table table-striped">
@@ -16,6 +18,7 @@
 				<tr>
 					<th>Product Name</th>
 					<th>Description</th>
+					<th>Category</th>
 
 				</tr>
 			</thead>

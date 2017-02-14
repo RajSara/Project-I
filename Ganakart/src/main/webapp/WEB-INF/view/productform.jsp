@@ -1,4 +1,3 @@
-
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page isELIgnored="false" %>
@@ -6,22 +5,28 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-<script>
+<title>Product Form</title>
+
+<!-- <script>
 $(function(){
 $('input[name=mfg]').datepicker({
 	format:'YYYY-mm-dd'
 		
 });	
 });
-</script> 
+</script> --> 
+
 </head>
 
 <body style="margin-top:80px;">
+
 <div class="container-wrapper">
 <div class="container">
-<c:url value="admin/product/addProduct" var="url"></c:url>
-<form:form action="${url }"  commandName="product">
+
+<c:url value="/admin/product/addProduct" var="url"></c:url>
+<form:form action="${url }"  commandName="product">  
+
+<%-- <form:form action="/admin/product/addProduct" commandName="product">  --%>
 
 <div class="form-group">
 <label for="id"></label>
@@ -52,11 +57,11 @@ $('input[name=mfg]').datepicker({
 <form:errors path="quantity" cssStyle="color:#ff0000"></form:errors>
 </div>
 
-<div class="form-group">
+<%-- <div class="form-group">
 <label for="mfg">Mfg Date</label>
 <form:input path="mfg" class="form-control"/>
 <form:errors path="mfg" cssStyle="color:#ff0000"></form:errors>
-</div> 
+</div>  --%>
 
 <div class="form-group">
 <label for="category">Category</label>
@@ -75,6 +80,21 @@ $('input[name=mfg]').datepicker({
 </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

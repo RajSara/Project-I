@@ -60,7 +60,7 @@
 <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-core</artifactId>
-    <version>5.2.5.Final</version>
+    <version>4.0.1.Final</version>
 </dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
@@ -91,6 +91,17 @@
     <artifactId>spring-orm</artifactId>
     <version>4.3.5.RELEASE</version>
 </dependency>
+
+<dependency>
+	<groupId>org.hibernate</groupId>
+	<artifactId>hibernate-validator</artifactId>
+	<version>4.2.0.Final</version>
+</dependency>
+
+<!-- Multipart file upload  -->
+
+
+
 
   
     <dependency>

@@ -1,8 +1,5 @@
 package com.music.model;
 
-import java.util.Date;
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,7 +8,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
 
 //import org.hibernate.validator.constraints.NotEmpty;
 @Entity
@@ -31,11 +27,11 @@ private String description;
 @Min(value=10)	
 private double price;
 
-@Min(value=2)
+@Min(value=1)
 private int quantity;
 	
-@NotNull(message="Manufacturing date is mandatory")	
-private Date mfg;
+/*@NotNull(message="Manufacturing date is mandatory")	
+private Date mfg;*/
 
 @ManyToOne
 @JoinColumn(name="cid")
@@ -72,12 +68,12 @@ public int getQuantity() {
 public void setQuantity(int quantity) {
 	this.quantity = quantity;
 }
-public Date getMfg() {
+/*public Date getMfg() {
 	return mfg;
 }
 public void setMfg(Date mfg) {
 	this.mfg = mfg;
-}
+}*/
 public Category getCategory() {
 	return category;
 }
@@ -87,6 +83,14 @@ public void setCategory(Category category) {
 
 
 }
+
+
+
+
+
+
+
+
 
 
 

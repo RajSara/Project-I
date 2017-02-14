@@ -41,10 +41,17 @@
            <ul class="nav navbar-nav navbar-left">
 		     <li class=""><a href="Carousel">Home</a> </li>
 			 <li> <a href="About">About</a> </li>
+			 
+			 <%-- <c:url var="productform" value="/admin/product/productform"></c:url>
+			 <li><a href="${productform }">Products</a></li>  --%>
+			 
+			 
 			 <li> <a href="admin/product/productform">Product</a> </li>
 			 
 			 <c:url var="allProducts" value="/all/product/getAllProducts"></c:url>
-			 <li><a href="${allProducts }"> Browse All Products </a></li>
+			 <li><a href="${allProducts }"> Browse All Products </a></li> 
+			 
+			 <!-- <li><a href="all/product/getAllProducts">Browse all products</a></li> -->
 			 
 			    <li class="dropdown">
 			       <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Categories <span class="caret"> </span> </a>
