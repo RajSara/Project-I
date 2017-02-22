@@ -1,28 +1,29 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page isELIgnored="false" %>
-<%@ include file="Header.jsp" %>
+<%@ include file="Head.jsp" %>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Edit Product Form</title>
+
+                                    <!--Date Picker using JQuery -->
+                  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+                   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+                     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
 <script>
 $(function(){
-$('input[name=mfg]').datepicker({
-	format:'YYYY-mm-dd'
+$("#datepicker").datepicker();
+	format:'YYYY-mm-dd'		
 });	
-});
-</script>
+</script>  
+
 </head>
-<body>
-<p>Date: <input type="text" id="datepicker"></p>
+<body style="margin-top:80px;">
+
 <div class="container-wrapper">
 <div class="container">
+
 <c:url value="/admin/product/editProduct" var="url"></c:url>
-<form:form action="${url }"  commandName="product">
+<form:form action="${url }"  commandName="product" enctype="multipart/form-data">
 
 <div class="form-group">
 <label for="id"></label>
@@ -59,24 +60,30 @@ $('input[name=mfg]').datepicker({
 <form:errors path="mfg" cssStyle="color:#ff0000"></form:errors>
 </div> --%>
 
+<div class="form-group">
+<label for="mfg">Manufacturing Date</label>
+<form:input path="mfg" class="form-control" type="text" id="datepicker"/>
+<form:errors path="mfg" cssStyle="color:#ff0000"></form:errors>
+</div> 
+
 
 <div class="form-group">
 <label for="category">Category</label>
-List<Category> c =model.getAttribute("categories");
+<!-- List<Category> c =model.getAttribute("categories");
 out.println(c.id)
-out.println(c.categoryDetails);
+out.println(c.categoryDetails); -->
  
 <c:forEach var="c" items="${categories}">
-<form:radiobutton path="category.id" value="${c.id}"/>${c.categoryDetails }
+<form:radiobutton path="category.id" value="${c.id}"/>
+${c.categoryDetails }
 </c:forEach>
-<form:errors path="mfg" cssStyle="color:#ff0000"></form:errors>
+<form:errors path="category" cssStyle="color:#ff0000"></form:errors>
 </div>
 
 <input type="submit" value="Edit Product" class="btn btn-default">
 </form:form>
 
 </div>
-
 
 </div>
 </body>

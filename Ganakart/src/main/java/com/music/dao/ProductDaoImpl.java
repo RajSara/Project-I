@@ -24,9 +24,9 @@ private SessionFactory sessionFactory;
 		System.out.println(product.getId());
 		System.out.println("I am inside the product dao");
 		Session session=sessionFactory.openSession();
-		Transaction tx=session.beginTransaction();
+		/*Transaction tx=session.beginTransaction();*/
 		session.save(product); //insert into product values (next.val,.....)
-		tx.commit();
+		/*tx.commit();*/
 		session.flush();
 		session.close();
 		System.out.println(product.getId());

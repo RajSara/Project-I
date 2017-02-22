@@ -46,4 +46,6 @@
 		<beans:property name="sessionFactory" ref="sessionFactory" />
 	</beans:bean>
 	 
+	 
+	 
 </beans:beans>

@@ -1,5 +1,9 @@
 package com.music.controller;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -11,6 +15,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.music.model.Product;
 import com.music.service.CategoryService;
@@ -38,13 +44,31 @@ public class ProductController
 		return "productform";
 	}
 
+
 	@RequestMapping("/admin/product/addProduct")
 	public String saveProduct(
 		@Valid  @ModelAttribute(value="product") Product product,BindingResult result){
-		/*System.out.println("I am inside the block controller");*/
+		System.out.println("I am inside the block controller");
 		if(result.hasErrors())
 			return "productform";
 		productService.saveProduct(product);
+		
+									/*addding images*/
+		
+		MultipartFile prodImage=product.getImage();
+		if(!prodImage.isEmpty()){
+			Path paths=Paths.get("C:/Users/SONY/git/Ganakart/src/main/webapp/resource/images/"+ product.getId()+".jpg");
+		try {
+			prodImage.transferTo(new File(paths.toString()));
+		} catch (IllegalStateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		}
+		
 		return "redirect:/all/product/getAllProducts";
 		
 	}
@@ -87,6 +111,14 @@ public class ProductController
 			return "productform";
 		productService.updateProduct(product);
 		return "redirect:/all/product/getAllProducts";
+	}
+	
+	@RequestMapping("/all/product/productsByCategory")
+	public String getProductsByCategory(@RequestParam(name="searchCondition")String searchCondition,Model model){
+		List<Product>products=productService.getAllProducts();
+		model.addAttribute("productList",products);
+		model.addAttribute("searchCondition",searchCondition);
+		return "productlist";
 	}
 
 	}

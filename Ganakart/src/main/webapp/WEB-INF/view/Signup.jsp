@@ -40,23 +40,33 @@
 			    <li class="dropdown">
 			       <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Categories <span class="caret"> </span> </a>
 					 <ul class="dropdown-menu">
-					   <li class="dropdown-header">Electrical</li>
+					  <!--  <li class="dropdown-header">Electrical</li>
 					   <li><a href="#"> Guitar</a> </li>
 					   <li><a href="#"> Keyboad</a> </li>
 					   <li class="dropdown-header">Hardware</li>
 					   <li><a href="#"> Voilin</a> </li>
-					   <li><a href="#"> ksjdcg</a> </li>
+					   <li><a href="#"> ksjdcg</a> </li> -->
+					   
+					   <c:url var="cat1" value="/all/product/productsByCategory?searchCondition=Brass"></c:url>
+					 <li> <a href="${cat1}">Brass</a></li>  
+					 
+					 <c:url var="cat2" value="/all/product/productsByCategory?searchCondition=Woodwinds"></c:url>
+					 <li> <a href="${cat2}">Woodwinds</a></li>
+					 
+					 <c:url var="cat3" value="/all/product/productsByCategory?searchCondition=Electronics"></c:url>
+					 <li> <a href="${cat3}">Electronics</a></li>
+					   
 					 </ul>
 					 </li>
 					 </ul>
 			 <div class="navbar-collapse collapse">
 			 <ul class="nav navbar-nav navbar-right">
-			 <li> <a href="Login">Login</a> </li>
+			 <li> <a href="Login"><span class="glyphicon glyphicon-Log-in"></span> Login</a> </li>
 			   </ul>
 			   </div>
   </div>
   </div>
-</nav> -->
+</nav> 
 												
 												<div class="vid-container">
   <video class="bgvid" autoplay="autoplay" muted="muted" preload="auto" loop>
@@ -69,8 +79,10 @@
     <div class="box">
       <h1>Signup</h1>
       <input type="text" placeholder="Username"/>
-      <input type="number" placeholder="Mobileno"/>
-      <input type="text" placeholder="Retype Password"/>
+    <!--   <input type="number" placeholder="Mobileno"/> -->
+      <input type="text" placeholder="Password"/>
+      <input type="text" placeholder="MailId"/>
+     
       <button>Signup</button>
     </div>
   </div>

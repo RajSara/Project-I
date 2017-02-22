@@ -8,7 +8,7 @@
 		    
 		    <style>
 body{
-background-image: url("<c:url value='/resource/images/2.jpg'/>");
+background-image: url("<c:url value='/resource/images/s.jpg'/>");
 background-size: cover;
 height: auto;
 width: 100%;
