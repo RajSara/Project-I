@@ -12,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.music.service.CategoryService;
+
 @Controller
 public class HomeController {
 
@@ -55,6 +57,11 @@ public String gotoHome5()
 {
 	return "Signup";
 }
+
+/*@RequestMapping("/index")
+public String index(HTTPSesssion session){
+	session.setAttribute("Categories",CategoryService.class)
+}*/
 
 @RequestMapping(value="checklogin",method=RequestMethod.POST)
 public void validateLogin(HttpServletRequest request,HttpServletRequest response,ServletRequest req,ServletResponse res)throws ServletException,IOException

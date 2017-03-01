@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +26,9 @@ import com.music.service.ProductService;
 @Controller
 public class ProductController 
 {
+
+	private Logger logger=Logger.getLogger(ProductController.class);
+
 	@Autowired
 	private ProductService productService;
 	@Autowired 
@@ -47,12 +51,15 @@ public class ProductController
 
 	@RequestMapping("/admin/product/addProduct")
 	public String saveProduct(
-		@Valid  @ModelAttribute(value="product") Product product,BindingResult result){
+		@Valid  @ModelAttribute(value="product") Product product,BindingResult result,Model model){
 		System.out.println("I am inside the block controller");
+		model.addAttribute("categories",categoryService.getCategories());
+		logger.debug("=================================================================");
 		if(result.hasErrors())
 			return "productform";
 		productService.saveProduct(product);
-		
+		logger.debug("After Persisting the ProductDEtails");
+	
 									/*addding images*/
 		
 		MultipartFile prodImage=product.getImage();

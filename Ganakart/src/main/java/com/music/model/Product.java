@@ -43,9 +43,9 @@ private Date mfg;
 @JoinColumn(name="cid")
 @NotNull(message="Category is mandatory")
 private Category category;
-public Category getCategory(){
-	return category;
-}
+//public Category getCategory(){
+//	return category;
+//}
 
 //sample_product [pid,name,description,price,quantity,mfg]
 
@@ -108,44 +108,17 @@ public MultipartFile getImage() {
 public void setImage(MultipartFile image) {
 	this.image = image;
 }
-public Category getCategory1(){
+
+public Category getCategory() {
 	return category;
 }
-public void setCategory1(Category category) {
+
+public void setCategory(Category category) {
 	this.category = category;
 }
 
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

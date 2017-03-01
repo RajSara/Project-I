@@ -73,7 +73,7 @@
 			 <ul class="nav navbar-nav navbar-right">
 		     <li> <a href="Login"><span class="glyphicon glyphicon-Log-in"></span> Login</a> </li>
 		     <li> <a href="Signup"><span class="glyphicon glyphicon-user"></span> Signup</a> </li>
-			 
+			 <li> <a href="<c:url value="/all/customerForm"></c:url>"> <span class="glyphicon glyphicon-user"></span> Register </a></li>
 			   </ul>
 			   </div>
   </div>

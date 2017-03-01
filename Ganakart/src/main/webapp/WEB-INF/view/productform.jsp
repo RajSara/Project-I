@@ -66,7 +66,7 @@ $("#datepicker").datepicker();
 <div class="form-group">
 <label for="category">Category</label>
 <c:forEach var="c" items="${categories }">
-<form:radiobutton path="category1.id" value="${c.id }"/>
+<form:radiobutton path="category.id" value="${c.id }"/>
 ${c.categoryDetails }
 </c:forEach>
 <form:errors path="category" cssStyle="color:#ff0000"></form:errors>
@@ -79,20 +79,11 @@ ${c.categoryDetails }
 
 <input type="submit" value="Add Product" class="btn btn-danger">
 </form:form>
-
 </div>
-
 
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
 
 
 

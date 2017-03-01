@@ -7,6 +7,8 @@
 
 <body style="margin-top:90px;">
 
+<div style="font-family:lucida calligraphy;color:#6600c;font-size:32px; text-align:center;">PRODUCT LIST</div>
+
 	<div class="container">
 
 		<table class="table table-striped">
