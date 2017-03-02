@@ -9,7 +9,7 @@
 <div class="container-wrapper">
 <div class="container">
 
-     <c:url var="url" value="/all/CustomerDetails"></c:url>
+     <c:url var="url" value="/eo/CustomerDetails"></c:url>
      <form:form action="${url }" commandName="customer">
      
       	<div class="form-group">
@@ -39,6 +39,7 @@
     	<div class="form-group">
     	<form:label path="users.username"> UserName </form:label>
     	<form:input path="users.username"/>
+    	${duplicateUsername}
     	<form:errors path="users.username" cssStyle="color:#ff9900"></form:errors>
     	</div>
     	
@@ -67,9 +68,9 @@
     	</div>
     	
     	<div class="form-group">
-    	<form:label path="billingAddress.State"> State </form:label>
-    	<form:input path="billingAddress.State"/>
-    	<form:errors path="billingAddress.State" cssStyle="color:#ff9900"/>
+    	<form:label path="billingAddress.Province"> Province</form:label>
+    	<form:input path="billingAddress.Province"/>
+    	<form:errors path="billingAddress.Province" cssStyle="color:#ff9900"></form:errors>
     	</div>
     	
     	<div class="form-group">
@@ -109,13 +110,6 @@
     	<form:input path="shippingAddress.Province"/>
     	<form:errors path="shippingAddress.Province" cssStyle="color:#ff9900"></form:errors>
     	</div>
-    	
-    	<div class="form-group">
-    	<form:label path="shippingAddress.State"> State</form:label>
-    	<form:input path="shippingAddress.State"/>
-    	<form:errors path="shippingAddress.State" cssStyle="color:#ff9900"></form:errors>
-    	</div>
-    	
     	
     	<div class="form-group">
     	<form:label path="shippingAddress.Country"> Country</form:label>

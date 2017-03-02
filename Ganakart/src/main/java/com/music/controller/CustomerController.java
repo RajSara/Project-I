@@ -17,12 +17,12 @@ public class CustomerController {
 	@Autowired
 private CustomerService customerService;	
 	
-@RequestMapping("/all/customerForm")
+@RequestMapping("/eo/customerForm")
 public String getRegistrationForm(Model model){
 	model.addAttribute("customer",new Customer());
 	return "CustomerDetails";
 }
-@RequestMapping("/all/CustomerDetails")
+@RequestMapping("/eo/CustomerDetails")
 public String registerCustomer(@Valid @ModelAttribute(value="customer") Customer customer,BindingResult result,Model model){
 	System.out.println("I'm Saranya");
 	if(result.hasErrors())
@@ -31,11 +31,12 @@ public String registerCustomer(@Valid @ModelAttribute(value="customer") Customer
 	customerService.saveCustomer(customer);
 	}catch(Exception e){
 		model.addAttribute("duplicateUsername","Username already exists. Please enter different username");
+		model.addAttribute("registrationSuccess","Congrats! Enter with your UserName and Proceed to Enjoy!!!!");
 		System.out.println("i'm vignesh");
 		System.out.println("Exception is " + e.getMessage());
 		return "CustomerDetails";
 	}
-	return "index";
+	return "loginm";
 }
 
 }

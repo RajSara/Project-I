@@ -11,7 +11,7 @@
 <body>
                                <!-- Header Command -->
 										
-							<%@ include file="Header.jsp" %>
+							<%@ include file="Head.jsp" %>
 
                                 <!-- Footer command -->
 						

@@ -26,9 +26,6 @@ public class ShippingAddress {
 	@NotEmpty(message="Province is Required")
 	private String Province;
 	
-	@NotEmpty(message="This country requires you to choose a State")
-	private String State;
-	
 	@NotEmpty(message="Country Name is Required")
 	private String Country;
 	
@@ -69,12 +66,6 @@ public class ShippingAddress {
 		Province = province;
 	}
 	
-	public String getState() {
-		return State;
-	}
-	public void setState(String state) {
-		State = state;
-	}
 	public String getCountry() {
 		return Country;
 	}

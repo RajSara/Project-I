@@ -13,12 +13,12 @@
 
 		<table class="table table-striped">
 			<thead>
-				<tr>
-					<th>Image</th>
-					<th>Product Name</th>
-					<th>Description</th>
-					<th>Category</th>
-                     <th>View/Edit/Delete</th>
+				<tr bgcolor="#ffff00">
+					<th style="color:#3366ff">Image</th>
+					<th style="color:#ff3333">Product Name</th>
+					<th style="color:#cc00ff">Description</th>
+					<th style="color:#993399">Category</th>
+                     <th style="color:#ff9900">View/Edit/Delete</th>
 				</tr>
 			</thead>
 			<c:forEach var="p" items="${productList}">

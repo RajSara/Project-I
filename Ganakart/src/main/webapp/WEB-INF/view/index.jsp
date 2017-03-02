@@ -18,7 +18,7 @@ width: 100%;
 </head>
 
 <body>
-									<%@include file="Header.jsp" %>
+									<%@include file="Head.jsp" %>
 									
 									
                                   <h2 style="margin-top:50px; text-align:center; color:white">Hello World!</h2>

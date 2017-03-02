@@ -9,8 +9,10 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.music.service.CategoryService;
 
@@ -35,9 +37,21 @@ public String gotoHome1()
 }
 
 @RequestMapping("/Login")
-public String gotoHome2()
+public String Login()
 {
 	return "Login";
+}
+
+
+//login?error, login?logout, login
+@RequestMapping("/loginm")
+public String loginm(@RequestParam(value="error",required=false) String error,
+		@RequestParam(value="logout",required=false) String logout,Model model){
+	if(error!=null)
+		model.addAttribute("error","Invalid Username and Password.. Please enter valid username and password");
+	if(logout!=null)
+		model.addAttribute("logout","Loggedout successfully..");
+	return "loginm";
 }
 
 @RequestMapping("/About")
@@ -57,13 +71,14 @@ public String gotoHome5()
 {
 	return "Signup";
 }
+}
 
 /*@RequestMapping("/index")
 public String index(HTTPSesssion session){
 	session.setAttribute("Categories",CategoryService.class)
 }*/
 
-@RequestMapping(value="checklogin",method=RequestMethod.POST)
+/*@RequestMapping(value="checklogin",method=RequestMethod.POST)
 public void validateLogin(HttpServletRequest request,HttpServletRequest response,ServletRequest req,ServletResponse res)throws ServletException,IOException
 {
  String u=request.getParameter("inputUsername");
@@ -83,4 +98,4 @@ public void validateLogin(HttpServletRequest request,HttpServletRequest response
     dispatch.forward(req, res);
    }
 }
-}
+}*/

@@ -1,5 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
 <%@ page isELIgnored="false" %>
 <html>
 <head>
@@ -29,12 +30,22 @@
    
        <div class="navbar-collapse collapse">
            <ul class="nav navbar-nav navbar-left">
-		     <li class=""><a href="Carousel">Home</a> </li>
-			 <li> <a href="About">About</a> </li>
-			 
+           
+           <c:url var="H" value="/Carousel"></c:url>
+           <li><a href="${H }">Home</a></li>
+           
+           <c:url var="A" value="/About"></c:url>
+           <li><a href="${A }">About</a></li>
+           
+		     <!-- <li class=""><a href="Carousel">Home</a> </li>
+			 <li> <a href="About">About</a> </li> -->
+			 			 
 			  <c:url var="productform" value="/admin/product/productform"></c:url>
+			
+			<c:if test="${pageContext.request.userPrincipal.name !=null}">
+			<security:authorize access="hasRole('ROLE_ADMIN')">
 			 <li><a href="${productform }">Products</a></li>
-			 
+			 </security:authorize>
 			 
 			<!--  <li> <a href="admin/product/productform">Product</a> </li> -->
 			 
@@ -46,16 +57,6 @@
 			    <li class="dropdown">
 			       <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Categories <span class="caret"> </span> </a>
 					 <ul class="dropdown-menu">
-					 
-					   <!-- <li class="dropdown-header"> Brass </li>
-					   <li><a href="#"> Trumpet </a> </li>
-					   <li><a href="#"> Tuba </a> </li>
-					   <li class="dropdown-header"> Woodwinds </li>
-					   <li><a href="#"> Flute </a> </li>
-					   <li><a href="#"> Oboe </a> </li>
-					   <li class="dropdown-header"> Electronic </li>
-					   <li><a href="#"> Keyboard </a> </li>
-					   <li><a href="#"> Drum </a> </li> -->
 					   
 					 <c:url var="cat1" value="/all/product/productsByCategory?searchCondition=Brass"></c:url>
 					 <li> <a href="${cat1}">Brass</a></li>  
@@ -68,12 +69,27 @@
 					   
 					 </ul>
 					 </li>
+					 
+					 <li><a href="">Welcome ${pageContext.request.userPrincipal.name}</a></li>
+					 
+					 </c:if>
+					 
 					 </ul>
 			 <div class="navbar-collapse collapse">
 			 <ul class="nav navbar-nav navbar-right">
 		     <li> <a href="Login"><span class="glyphicon glyphicon-Log-in"></span> Login</a> </li>
 		     <li> <a href="Signup"><span class="glyphicon glyphicon-user"></span> Signup</a> </li>
-			 <li> <a href="<c:url value="/all/customerForm"></c:url>"> <span class="glyphicon glyphicon-user"></span> Register </a></li>
+		     
+		     <c:if test="${pageContext.request.userPrincipal.name==null}">
+		     
+		     <li> <a href="<c:url value="/loginm"></c:url>"> <span class="glyphicon glyphicon-Log-in"></span> loginm </a></li>
+			 <li> <a href="<c:url value="/eo/customerForm"></c:url>"> <span class="glyphicon glyphicon-user"></span> Register </a></li>
+			 </c:if>
+			 
+			 <c:if test="${pageContext.request.userPrincipal.name !=null}">
+			 <li><a href="<c:url value="/j_spring_security_logout"></c:url>">Logout</a></li>
+			 </c:if>
+			 
 			   </ul>
 			   </div>
   </div>

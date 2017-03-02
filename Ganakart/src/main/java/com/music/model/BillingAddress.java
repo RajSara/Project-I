@@ -22,8 +22,8 @@ public class BillingAddress {
 	@NotEmpty(message="CityName should not be Empty")
 	private String City;
 	
-	@NotEmpty(message="StateName shold not be Empty")
-	private String State;
+	@NotEmpty(message="Province is Required")
+	private String Province;
 	
 	@NotEmpty(message="CountryName should not be Empty")
 	private String Country;
@@ -57,12 +57,14 @@ public class BillingAddress {
 	public void setCity(String city) {
 		City = city;
 	}
-	public String getState() {
-		return State;
+	
+	public String getProvince() {
+		return Province;
 	}
-	public void setState(String state) {
-		State = state;
+	public void setProvince(String province) {
+		Province = province;
 	}
+	
 	public String getCountry() {
 		return Country;
 	}

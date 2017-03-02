@@ -36,17 +36,11 @@
            <ul class="nav navbar-nav navbar-left">
 		     <li class=""><a href="Home">Home</a> </li>
 			 <li> <a href="About">About</a> </li>
-			 <li> <a href="ProductForm">Product</a> </li>
-			    <li class="dropdown">
+			 <!-- <li> <a href="ProductForm">Product</a> </li> -->
+			    <%-- <li class="dropdown">
 			       <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Categories <span class="caret"> </span> </a>
 					 <ul class="dropdown-menu">
-					  <!--  <li class="dropdown-header">Electrical</li>
-					   <li><a href="#"> Guitar</a> </li>
-					   <li><a href="#"> Keyboad</a> </li>
-					   <li class="dropdown-header">Hardware</li>
-					   <li><a href="#"> Voilin</a> </li>
-					   <li><a href="#"> ksjdcg</a> </li> -->
-					   
+					 
 					   <c:url var="cat1" value="/all/product/productsByCategory?searchCondition=Brass"></c:url>
 					 <li> <a href="${cat1}">Brass</a></li>  
 					 
@@ -57,7 +51,7 @@
 					 <li> <a href="${cat3}">Electronics</a></li>
 					   
 					 </ul>
-					 </li>
+					 </li> --%>
 					 </ul>
 			 <div class="navbar-collapse collapse">
 			 <ul class="nav navbar-nav navbar-right">
