@@ -9,6 +9,11 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		    <link rel="stylesheet" href="<c:url value='/resource/css/bootstrap.min.css'/>" />
 		 
+		 
+		                                     <!-- Angular Js -->
+		                                     
+		      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>                               
+		 
 	</head>
 <body>
 
@@ -80,14 +85,18 @@
 		     <li> <a href="Login"><span class="glyphicon glyphicon-Log-in"></span> Login</a> </li>
 		     <li> <a href="Signup"><span class="glyphicon glyphicon-user"></span> Signup</a> </li>
 		     
+		     
+		     
 		     <c:if test="${pageContext.request.userPrincipal.name==null}">
 		     
 		     <li> <a href="<c:url value="/loginm"></c:url>"> <span class="glyphicon glyphicon-Log-in"></span> loginm </a></li>
 			 <li> <a href="<c:url value="/eo/customerForm"></c:url>"> <span class="glyphicon glyphicon-user"></span> Register </a></li>
+			 
 			 </c:if>
 			 
 			 <c:if test="${pageContext.request.userPrincipal.name !=null}">
-			 <li><a href="<c:url value="/j_spring_security_logout"></c:url>">Logout</a></li>
+			 <li> <a href="<c:url value="/Cart"></c:url>"><span class="glyphicons glyphicons-shopping-cart"></span>Cart</a></li>
+			 <li><a href="<c:url value="/j_spring_security_logout"></c:url>"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
 			 </c:if>
 			 
 			   </ul>

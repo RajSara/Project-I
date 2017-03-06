@@ -71,6 +71,11 @@ public String gotoHome5()
 {
 	return "Signup";
 }
+@RequestMapping("/Cart")
+public String gotoHome6()
+{
+	return "Cart";
+}
 }
 
 /*@RequestMapping("/index")

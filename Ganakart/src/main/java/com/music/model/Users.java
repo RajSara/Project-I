@@ -26,6 +26,9 @@ private boolean enabled;
 
 @OneToOne(mappedBy="users")
 private Customer customer;
+ 
+                             /*Getting setter and getter methods*/
+
 public int getId() {
 	return id;
 }
@@ -50,11 +53,14 @@ public boolean isEnabled() {
 public void setEnabled(boolean enabled) {
 	this.enabled = enabled;
 }
-
+public Customer getCustomer() {
+	return customer;
+}
+public void setCustomer(Customer customer) {
+	this.customer = customer;
 }
 
-
-
+}
 
 
 
