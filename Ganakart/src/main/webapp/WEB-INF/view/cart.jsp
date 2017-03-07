@@ -1,4 +1,39 @@
-                                           <!--Header Tag  -->
+<%@ include file="Head.jsp" %>
+
+<html>
+<head>
+<title>Cart</title>
+</head>
+<body style="margin-top:100px">
+<!-- <div ng-app="app" ng-controller="ProductController">
+<div ng-init="getCart($cartId)"> -->
+
+<table>
+<thead>
+<tr><th>NAME</th><th>QUANTITY</th><th>TOTAL PRICE</th>
+</tr>
+</thead>
+
+<tr ng-repeat="cartItem in cart.cartItems">
+<td>{{cartItem.product.name}}</td>
+<td>{{cartItem.quantity</td>
+<td>{{cartItem.totalPrice</td>
+</tr>
+
+
+</table>
+
+</div></div>
+
+<script src="<c:url value="/resource/js/controller.js"></c:url>"></script>
+
+</body>
+</html>
+
+
+
+
+<%--                                            <!--Header Tag  -->
                                         <%@include file="Head.jsp"%>
 <html>
 <head>
@@ -127,4 +162,4 @@ font-family:arial;
 	</div>
 	
 </body>
-</html>
+</html> --%>

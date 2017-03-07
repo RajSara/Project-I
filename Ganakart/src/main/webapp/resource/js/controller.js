@@ -6,6 +6,12 @@ app.controller("ProductController",function($scope,$http){
 		})
 	}
 	
+	$scope.getCart=function(cartId){
+		console.log("cartId is"+cartId)
+		$http.get('http://localhost:8080/Ganakart/cart/getCart/'+cartId).success(function(){
+			$scope.cart=data //while retriving the data it will be in the JSON form
+		})
+	}
 })
 
 
