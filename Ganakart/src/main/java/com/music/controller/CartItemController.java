@@ -16,6 +16,7 @@ import com.music.model.CartItem;
 import com.music.model.Customer;
 import com.music.model.Product;
 import com.music.service.CartItemService;
+import com.music.service.CartService;
 import com.music.service.CustomerService;
 import com.music.service.ProductService;
 
@@ -30,6 +31,9 @@ public class CartItemController {
 	
 	@Autowired
 	private ProductService productService;
+	
+	@Autowired
+	private CartService cartService;
 
 	@RequestMapping("/cart/addCartItem/{pid}")
 	
@@ -64,4 +68,17 @@ public class CartItemController {
 	cartItem.setCart(cart);//set cart id
 	cartItemService.addCartItem(cartItem); //insert query	
 }
-}
+	@RequestMapping("/cart/removeCartItem/{cartItemId}")
+	@ResponseStatus(value=HttpStatus.NO_CONTENT)
+	public void removeCartItem(@PathVariable int cartItemId){
+	CartItem cartItem=cartItemService.getCartItem(cartItemId);
+	cartItemService.removeCartItem(cartItem);
+	}
+	@RequestMapping("/cart/removeAllCartItems/{cartId}")
+	@ResponseStatus(value=HttpStatus.NO_CONTENT)
+	public void removeAllCartItems(@PathVariable int cartId){
+	Cart cart=cartService.getCart(cartId);
+	cartItemService.removeAllCartItems(cart);
+	}
+
+	}

@@ -48,7 +48,6 @@ public class ProductController
 		return "productform";
 	}
 
-
 	@RequestMapping("/admin/product/addProduct")
 	public String saveProduct(
 		@Valid  @ModelAttribute(value="product") Product product,BindingResult result,Model model){

@@ -26,7 +26,7 @@ public class CartItem implements Serializable{
 	@JoinColumn(name="product_id")
 	private Product product;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name="cart_id")
 	@JsonIgnore
 	private Cart cart;

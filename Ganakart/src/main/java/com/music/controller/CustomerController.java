@@ -36,7 +36,7 @@ public String registerCustomer(@Valid @ModelAttribute(value="customer") Customer
 		System.out.println("Exception is " + e.getMessage());
 		return "CustomerDetails";
 	}
-	return "loginm";
+	return "Login";
 }
 
 }

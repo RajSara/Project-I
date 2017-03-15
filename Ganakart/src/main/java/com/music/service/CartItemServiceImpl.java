@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.music.dao.CartItemDao;
+import com.music.model.Cart;
 import com.music.model.CartItem;
 @Service
 public class CartItemServiceImpl implements CartItemService {
@@ -13,5 +14,17 @@ private CartItemDao cartItemDao;
 	  cartItemDao.addCartItem(cartItem);
 		
 	}
-
+	public CartItem getCartItem(int cartItemId) {
+	  return cartItemDao.getCartItem(cartItemId);
+			
+	}
+	public void removeCartItem(CartItem cartItem) {
+	  cartItemDao.removeCartItem(cartItem);
+					
+	}	
+	public void removeAllCartItems(Cart cart) {
+	  cartItemDao.removeAllCartItems(cart);
+						
+	}	
+	
 }

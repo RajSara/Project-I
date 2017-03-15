@@ -31,7 +31,7 @@
   <span class="icon-bar"> </span>
   </button>
   
-   <a class="navbar-brand" href="index"> GanaKart</a>
+   <a class="navbar-brand" href="index"><img class="img-responsive logo" src="<c:url value='/resource/images/logo.png' />" style="width:80px;height:90px" /></a>
    
        <div class="navbar-collapse collapse">
            <ul class="nav navbar-nav navbar-left">
@@ -75,7 +75,7 @@
 					 </ul>
 					 </li>
 					 
-					 <li><a href="">Welcome ${pageContext.request.userPrincipal.name}</a></li>
+					 <li><a href="">Hi ${pageContext.request.userPrincipal.name}!!!</a></li>
 					 
 					 </c:if>
 					 
@@ -84,7 +84,7 @@
 			 <ul class="nav navbar-nav navbar-right">
 		     <li> <a href="Login"><span class="glyphicon glyphicon-Log-in"></span> Login</a> </li>
 		     <li> <a href="Signup"><span class="glyphicon glyphicon-user"></span> Signup</a> </li>
-		     
+		     <li> <a href="Regown"><span class="glyphicon glyphicon-user"></span> Registerrr</a> </li>
 		     
 		     <security:authorize access="hasRole('ROLE_USER')">
 		     
@@ -92,9 +92,9 @@
 		     
 		     </security:authorize>
 		     <c:if test="${pageContext.request.userPrincipal.name==null}">
-		     
-		     <li> <a href="<c:url value="/loginm"></c:url>"> <span class="glyphicon glyphicon-Log-in"></span> loginm </a></li>
+		   
 			 <li> <a href="<c:url value="/eo/customerForm"></c:url>"> <span class="glyphicon glyphicon-user"></span> Register </a></li>
+			 
 			 
 			 </c:if>
 			 

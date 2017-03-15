@@ -36,22 +36,22 @@ public String gotoHome1()
 	return "index";
 }
 
-@RequestMapping("/Login")
+@RequestMapping("/Regown")
 public String Login()
 {
-	return "Login";
+	return "Regown";
 }
 
 
 //login?error, login?logout, login
-@RequestMapping("/loginm")
+@RequestMapping("/Login")
 public String loginm(@RequestParam(value="error",required=false) String error,
 		@RequestParam(value="logout",required=false) String logout,Model model){
 	if(error!=null)
 		model.addAttribute("error","Invalid Username and Password.. Please enter valid username and password");
 	if(logout!=null)
 		model.addAttribute("logout","Loggedout successfully..");
-	return "loginm";
+	return "Login";
 }
 
 @RequestMapping("/About")

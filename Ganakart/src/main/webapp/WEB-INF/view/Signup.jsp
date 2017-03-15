@@ -1,20 +1,13 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+									<%@ include file="Head.jsp" %>
 
 <html>
-<head>										
-										<!-- Bootstrap Command -->
-										
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		    <link rel="stylesheet" href="<c:url value='/resource/css/bootstrap.min.css'/>" />
+<head>												    
+		    <%-- <link rel="stylesheet" href="<c:url value='/resource/saracss/Login.css'/>" /> --%>
 		    
-		    <link rel="stylesheet" href="<c:url value='/resource/saracss/Login.css'/>" />
-		    
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Login</title>
 
 </head>
 <body>
-									<%@ include file="Head.jsp" %>
 									
 									<!-- <!-- Header navbar -->
 				
@@ -76,6 +69,9 @@
     <!--   <input type="number" placeholder="Mobileno"/> -->
       <input type="text" placeholder="Password"/>
       <input type="text" placeholder="MailId"/>
+      <input type="text" placeholder="Mobile"/>
+      <input type="text" placeholder="Address"/>
+      <input type="text" placeholder="Pincode"/>
      
       <button>Signup</button>
     </div>

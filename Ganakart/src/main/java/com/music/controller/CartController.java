@@ -34,7 +34,7 @@ public class CartController {
 	}
 
 	@RequestMapping("/cart/getCart/{cartId}")
-public @ResponseBody Cart getCart/*Items*/(@PathVariable/*(value="cartId")*/ int cartId){
+public @ResponseBody Cart getCart(@PathVariable int cartId){
 		Cart cart=cartService.getCart(cartId);
 		return cart;
 			 
