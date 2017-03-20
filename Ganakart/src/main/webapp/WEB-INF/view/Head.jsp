@@ -31,6 +31,7 @@
   <span class="icon-bar"> </span>
   </button>
   
+ 
    <a class="navbar-brand" href="index"><img class="img-responsive logo" src="<c:url value='/resource/images/logo.png' />" style="width:80px;height:90px" /></a>
    
        <div class="navbar-collapse collapse">
@@ -80,24 +81,27 @@
 					 </c:if>
 					 
 					 </ul>
+					 
 			 <div class="navbar-collapse collapse">
 			 <ul class="nav navbar-nav navbar-right">
-		     <li> <a href="Login"><span class="glyphicon glyphicon-Log-in"></span> Login</a> </li>
-		     <li> <a href="Signup"><span class="glyphicon glyphicon-user"></span> Signup</a> </li>
-		     <li> <a href="Regown"><span class="glyphicon glyphicon-user"></span> Registerrr</a> </li>
+			 
+			 <c:if test="${pageContext.request.userPrincipal.name==null }">
+			 
+			 <c:url var="log" value="/Login"></c:url>
+			 <li> <a href="Login"><span class="glyphicon glyphicon-Log-in"></span> Login</a> </li>
+			 <li> <a href="<c:url value="/eo/customerForm"></c:url>"> <span class="glyphicon glyphicon-user"></span> Register </a></li>
+			 </c:if>
 		     
+		     <!-- <li> <a href="Login"><span class="glyphicon glyphicon-Log-in"></span> Login</a> </li>
+		     <li> <a href="Signup"><span class="glyphicon glyphicon-user"></span> Signup</a> </li> 
+		     <li> <a href="Regown"><span class="glyphicon glyphicon-user"></span> Registerrr</a> </li>
+		      -->
 		     <security:authorize access="hasRole('ROLE_USER')">
 		     
 		     <li> <a href="<c:url value="/cart/getCartId"></c:url>"><span class="glyphicons glyphicons-shopping-cart"></span>Cart</a></li>
 		     
 		     </security:authorize>
-		     <c:if test="${pageContext.request.userPrincipal.name==null}">
-		   
-			 <li> <a href="<c:url value="/eo/customerForm"></c:url>"> <span class="glyphicon glyphicon-user"></span> Register </a></li>
-			 
-			 
-			 </c:if>
-			 
+		     
 			 <c:if test="${pageContext.request.userPrincipal.name !=null}">
 			 
 			 <li><a href="<c:url value="/j_spring_security_logout"></c:url>"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
