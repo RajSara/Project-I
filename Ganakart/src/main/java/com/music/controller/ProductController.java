@@ -132,13 +132,6 @@ public class ProductController
 	
 	
 
-
-
-
-
-
-
-
 	/*public ProductController()
 	{
 		System.out.println("Creating instance for ProductController");

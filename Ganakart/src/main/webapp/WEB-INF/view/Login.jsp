@@ -7,9 +7,10 @@
 
 </head>
 <body>
+${error }
+${logout }
+${registrationSuccess}
 
-
-<body>
   <div class="content">
     <!--Echo out errors here. See example-->
     <!--<p class=error>Error, wrong username or password used. Please, try again.-->
@@ -63,7 +64,5 @@
         <rect width="50px" height="50px" x="25px" y="25px" class="bubble" id="bub11" />
     </svg>
   </div>
-</body>
-
 </body>
 </html>
