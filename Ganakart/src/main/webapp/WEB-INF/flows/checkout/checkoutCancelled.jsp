@@ -21,7 +21,7 @@
 </div>
 
 <section class="container">
-<p><a href="<spring:url value="/all/product/getAllProducts"/>" class="btn btn-default"> Products </a></p></section>
+<p><a href="<spring:url value="/all/product/getAllProducts"/>" class="btn btn-info"> Products </a></p></section>
 
 <script src="<c:url value="/resource/js/controller.js"></c:url>"></script>
 

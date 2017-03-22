@@ -34,7 +34,6 @@ private String email;
 @Length(max=10,min=10)
 private String phonenumber;
 
-
 @OneToOne(cascade=CascadeType.ALL)
 @JoinColumn(name="users_id")
 private Users users;

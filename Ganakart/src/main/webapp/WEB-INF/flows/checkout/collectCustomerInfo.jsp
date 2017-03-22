@@ -18,7 +18,7 @@
 
         <form:form commandName="order" class="form-horizontal">
 
-        <h3>Basic Info:</h3>
+        <h3>BASIC INFO:</h3>
 
         <div class="form-group">
             <label for="name">First Name</label>
@@ -42,7 +42,7 @@
 
         <br/>
 
-        <h3>Billing Address:</h3>
+        <h3>BILLING ADDRESS:</h3>
 
         <div class="form-group">
             <label for="billingStreet">Street Name</label>
@@ -78,9 +78,9 @@
 
         <br/><br/>
 
-        <input type="submit" value="Next" class="btn btn-default" name="_eventId_customerInfoCollected" />
+        <input type="submit" value="Next" class="btn btn-success" name="_eventId_customerInfoCollected" />
 
-        <button class="btn btn-default" name="_eventId_cancel">Cancel</button>
+        <button class="btn btn-danger" name="_eventId_cancel">Cancel</button>
 
         </form:form>
 

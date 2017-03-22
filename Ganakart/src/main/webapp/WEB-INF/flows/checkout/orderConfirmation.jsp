@@ -5,7 +5,7 @@
 <jsp:useBean id="now" class="java.util.Date" />
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
 <title>Order Confirmation</title>
 </head>
 <body>
@@ -87,7 +87,7 @@
                                         <h4><strong>Grand Total:</strong></h4>
                                     </td>
                                     <td class="text-center text-danger">
-                                        <h4><strong>${grandTotal}</strong></h4>
+                                        <h4><strong> &#8377 ${grandTotal}</strong></h4>
                                     </td>
                                 </tr>
 
@@ -100,14 +100,16 @@
 
                         <br/><br/>
 
-                        <button class="btn btn-default" name="_eventId_backToCollectShippingDetail">Back</button>
+                        <button class="btn btn-warning" name="_eventId_backToCollectShippingDetail">Back</button>
 
-                        <input type="submit" value="Submit Order" class="btn btn-default" name="_eventId_orderConfirmed" />
+                        <input type="submit" value="Submit Order" class="btn btn-success" name="_eventId_orderConfirmed" />
 
-                        <button class="btn btn-default" name="_eventId_cancel">Cancel</button>
+                        <button class="btn btn-danger" name="_eventId_cancel">Cancel</button>
                     </div>
                 </form:form>
             </div>
+        </div>
+        </div>
         </div>
 
 <%@ include file="/WEB-INF/view/Footer.jsp" %>

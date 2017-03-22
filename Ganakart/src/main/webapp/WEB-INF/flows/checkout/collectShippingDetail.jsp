@@ -14,7 +14,7 @@
             <h1>Cutomer</h1>
 
 
-            <p class="lead">Customer Details:</p>
+            <p class="lead">CUSTOMER DETAILS:</p>
         </div>
 
         <form:form commandName="order" class="form-horizontal">
@@ -55,11 +55,11 @@
 
         <br/><br/>
 
-        <button class="btn btn-default" name="_eventId_backToCollectCustomerInfo">Back</button>
+        <button class="btn btn-warning" name="_eventId_backToCollectCustomerInfo">Back</button>
 
-        <input type="submit" value="Next" class="btn btn-default" name="_eventId_shippingDetailCollected" />
+        <input type="submit" value="Next" class="btn btn-success" name="_eventId_shippingDetailCollected" />
 
-        <button class="btn btn-default" name="_eventId_cancel">Cancel</button>
+        <button class="btn btn-danger" name="_eventId_cancel">Cancel</button>
 
         </form:form>
 

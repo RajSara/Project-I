@@ -30,7 +30,6 @@
   <span class="icon-bar"> </span>
   <span class="icon-bar"> </span>
   </button>
-  
  
    <a class="navbar-brand" href="index"><img class="img-responsive logo" src="<c:url value='/resource/images/logo.png' />" style="width:80px;height:90px" /></a>
    
@@ -104,7 +103,7 @@
 		      -->
 		     <security:authorize access="hasRole('ROLE_USER')">
 		     
-		     <li> <a href="<c:url value="/cart/getCartId"></c:url>"><span class="glyphicons glyphicons-shopping-cart"></span>Cart</a></li>
+		     <li> <a href="<c:url value="/cart/getCartId"></c:url>"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
 		     
 		     </security:authorize>
 		     

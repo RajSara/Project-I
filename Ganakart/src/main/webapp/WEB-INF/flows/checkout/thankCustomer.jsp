@@ -21,7 +21,7 @@
         </section>
 
         <section class="container">
-            <p><a href="<spring:url value="/" />" class="btn btn-default">OK</a></p>
+            <p><a href="<spring:url value="/" />" class="btn btn-primary">OK</a></p>
         </section>
 </div>
 </div>
