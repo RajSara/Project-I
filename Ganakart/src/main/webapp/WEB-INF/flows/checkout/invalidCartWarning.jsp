@@ -19,12 +19,10 @@
         </section>
 
         <section class="container">
-            <p><a href="<spring:url value="/product/productList" />" class="btn btn-default">Products</a></p>
+            <p><a href="<spring:url value="/all/product/getAllProducts" />" class="btn btn-default">Products</a></p>
         </section>
 
 </div> </div>
-<%@ include file="/WEB-INF/view/Footer.jsp" %>
-
-
+<%-- <%@ include file="/WEB-INF/view/Footer.jsp" %>--%>
 </body>
 </html>

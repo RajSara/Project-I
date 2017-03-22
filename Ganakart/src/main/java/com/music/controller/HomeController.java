@@ -1,20 +1,9 @@
 package com.music.controller;
 
-import java.io.IOException;
-
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import com.music.service.CategoryService;
 
 @Controller
 public class HomeController {
@@ -35,13 +24,6 @@ public String gotoHome1()
 {
 	return "index";
 }
-
-@RequestMapping("/Regown")
-public String Login()
-{
-	return "Regown";
-}
-
 
 //login?error, login?logout, login
 @RequestMapping("/Login")
@@ -66,41 +48,4 @@ public String gotoHome4()
 	return "Carousel";
 }
 
-@RequestMapping("/Signup")
-public String gotoHome5()
-{
-	return "Signup";
 }
-@RequestMapping("/Cart")
-public String gotoHome6()
-{
-	return "Cart";
-}
-}
-
-/*@RequestMapping("/index")
-public String index(HTTPSesssion session){
-	session.setAttribute("Categories",CategoryService.class)
-}*/
-
-/*@RequestMapping(value="checklogin",method=RequestMethod.POST)
-public void validateLogin(HttpServletRequest request,HttpServletRequest response,ServletRequest req,ServletResponse res)throws ServletException,IOException
-{
- String u=request.getParameter("inputUsername");
- String p=request.getParameter("inputPassword");
-  LoginCredential obj=new LoginCredential();
-   obj.setUname(u); 
-   obj.setPasswd(p);
-  
-   if(obj.checklogin())
-   {
-    RequestDispatcher dispatch=request.getRequestDispatcher("index");
-    dispatch.forward(req, res);
-   }
-   else
-   {
-    RequestDispatcher dispatch=request.getRequestDispatcher("Login");
-    dispatch.forward(req, res);
-   }
-}
-}*/

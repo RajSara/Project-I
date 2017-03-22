@@ -12,5 +12,4 @@ public class CustomerOrderController {
 		System.out.println("I'm inside customerordercontroller");
 		return "redirect:/checkout?cartId="+cartId;
 	}
-
 }

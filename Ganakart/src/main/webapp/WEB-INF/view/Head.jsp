@@ -72,6 +72,12 @@
 					 
 					 <c:url var="cat3" value="/all/product/productsByCategory?searchCondition=Electronics"></c:url>
 					 <li> <a href="${cat3}">Electronics</a></li>
+					 
+					 <c:url var="cat4" value="/all/product/productsByCategory?searchCondition=RareCollection"></c:url>
+					 <li> <a href="${cat4}">Rare Collection</a></li>
+					 
+					 <c:url var="cat5" value="/all/product/productsByCategory?searchCondition=String"></c:url>
+					 <li> <a href="${cat5}">String</a></li>
 					   
 					 </ul>
 					 </li>
